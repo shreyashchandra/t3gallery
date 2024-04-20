@@ -18,10 +18,10 @@ export const metadata = {
 
 function TopNav() {
   return (
-    <nav className="flex w-full items-center justify-between">
-      <div className="w-full p-4 shadow-sm shadow-slate-400">
-        <h1 className="flex items-center gap-2 text-3xl font-semibold">
-          SpaceVerse
+    <nav className="flex w-full items-center justify-between p-4 shadow-sm  shadow-slate-400">
+      <div className=" w-full ">
+        <h1 className="flex items-center gap-2 text-3xl  font-semibold">
+          <span className="cursor-pointer">SpaceVerse</span>
           <img
             width="40"
             height="40"
@@ -30,6 +30,7 @@ function TopNav() {
           />
         </h1>
       </div>
+      <h2 className="cursor-pointer font-semibold">Signin</h2>
     </nav>
   );
 }
@@ -41,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
+      <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
         <TopNav />
         {children}
       </body>
