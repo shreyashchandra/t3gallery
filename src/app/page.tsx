@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { db } from "~/server/db";
+export const dynamic = "force-dynamic";
 
 /* eslint-disable @next/next/no-img-element */
 const mockUrls = [
