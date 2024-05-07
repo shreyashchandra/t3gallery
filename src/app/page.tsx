@@ -1,3 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+import { db } from "~/server/db";
+
 /* eslint-disable @next/next/no-img-element */
 const mockUrls = [
   "https://stsci-opo.org/STScI-01HQNVFG4DPEVRZC18XTF2QBCG.png",
@@ -11,16 +17,28 @@ const mockImages = mockUrls.map((url, index) => ({
   url,
 }));
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = await db.query.posts.findMany();
+
   return (
     <main>
-      <div className="flex flex-wrap justify-between gap-4 p-5">
-        {[...mockImages, ...mockImages].map((image) => (
-          <div key={image.id} className="w-48">
+      <div className="flex flex-wrap justify-between gap-2 p-5">
+        {posts.map((post) => (
+          <div key={post.id} className="w-40 border-2 border-white">
+            <div
+              key={post.id}
+              className="h-48 w-48 cursor-pointer transition-all duration-700 hover:scale-125"
+            >
+              {post.name}
+            </div>
+          </div>
+        ))}
+        {[...mockImages, ...mockImages].map((image, index) => (
+          <div key={image.id + "-" + index} className="w-40">
             <img
               src={image.url}
               alt="image"
-              className="h-48 w-48 cursor-pointer hover:scale-150"
+              className="h-48 w-48 cursor-pointer transition-all duration-700 hover:scale-125"
             />
           </div>
         ))}

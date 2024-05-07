@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
