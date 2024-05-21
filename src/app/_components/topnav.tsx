@@ -10,7 +10,7 @@ export function TopNav() {
   return (
     <nav className="flex w-full items-center justify-between p-4 shadow-sm  shadow-slate-400">
       <div>
-        <h1 className="flex items-center gap-2 text-3xl  font-semibold">
+        <h1 className="flex items-center gap-2 text-lg font-semibold  md:text-3xl">
           <span className="cursor-pointer">SpaceVerse</span>
           <img
             width="40"
