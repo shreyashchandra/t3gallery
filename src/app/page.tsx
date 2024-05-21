@@ -19,11 +19,8 @@ export default async function HomePage() {
       <div className="relative h-full w-full bg-black">
         <div className="absolute left-0 right-0 top-[-10%] h-[1000px]  w-full rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-            {images.map((image, index) => (
-              <div
-                key={image.id + "-" + index}
-                className="duration-200 hover:scale-110"
-              >
+            {images.map((image) => (
+              <div key={image.id} className="duration-200 hover:scale-110">
                 <img
                   src={image.url}
                   alt="image"
