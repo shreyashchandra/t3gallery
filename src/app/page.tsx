@@ -5,6 +5,7 @@
 
 import { desc } from "drizzle-orm";
 import { db } from "~/server/db";
+import { Footer } from "./_components/footer";
 export const dynamic = "force-dynamic";
 
 /* eslint-disable @next/next/no-img-element */
@@ -29,6 +30,8 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
+
+          <Footer />
         </div>
       </div>
     </main>
