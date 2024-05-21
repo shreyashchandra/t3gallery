@@ -16,18 +16,17 @@ export default async function HomePage() {
 
   return (
     <main>
-      <div className="flex flex-wrap justify-between gap-2 p-5">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {images.map((image, index) => (
           <div
             key={image.id + "-" + index}
-            className="flex w-40 flex-col duration-700 hover:scale-125"
+            className="duration-200 hover:scale-110"
           >
             <img
               src={image.url}
               alt="image"
-              className="h-48 w-48 cursor-pointer transition-all "
+              className="h-auto max-w-full rounded-lg"
             />
-            <div>{image.name}</div>
           </div>
         ))}
       </div>

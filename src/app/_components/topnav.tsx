@@ -17,7 +17,9 @@ export function TopNav() {
       </div>
       <div>
         <SignedOut>
-          <SignInButton />
+          <div className="cursor-pointer rounded-lg bg-slate-400 p-2 text-black hover:bg-slate-600 hover:duration-200">
+            <SignInButton />
+          </div>
         </SignedOut>
         <SignedIn>
           <UserButton />
