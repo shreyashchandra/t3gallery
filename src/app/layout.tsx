@@ -18,6 +18,7 @@ const inter = Inter({
 export const metadata = {
   title: "SpaceVerse",
   description: "A Gallery Of Our Being",
+
   icons: [
     { rel: "icon", url: "https://img.icons8.com/ultraviolet/40/planet.png" },
   ],
